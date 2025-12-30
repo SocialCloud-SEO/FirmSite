@@ -15,7 +15,10 @@ body {
 
 header {
   padding: 80px 20px;
-  background-image: url("hero.jpg");
+  background-image: image-set(
+  url("hero.webp") type("image/webp"),
+  url("hero.jpg") type("image/jpeg")
+);
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -176,7 +179,10 @@ h1, h2 {
 </section>
 
 <div class="image-strip">
-  <img src="justice.jpg" alt="Texas courthouse and symbols of justice">
+  <picture>
+    <source srcset="justice.avif" type="image/avif">
+    <img src="justice.jpg" alt="Texas courthouse and symbols of justice">
+  </picture>
 </div>
 
 <section class="container">
